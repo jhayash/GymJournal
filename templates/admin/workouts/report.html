@@ -1,0 +1,30 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+
+<h2>Workout Report</h2>
+
+<form method="get">
+    <label>Start Date: <input type="date" name="start_date" value="{{ start_date }}"></label>
+    <label>End Date: <input type="date" name="end_date" value="{{ end_date }}"></label>
+    <label>Exercise:
+        <select name="exercise">
+            <option value="">-- All Exercises --</option>
+            {% for exercise in exercises %}
+                <option value="{{ exercise.id }}" {% if exercise.id|stringformat:"s" == selected_exercise_id %}selected{% endif %}>
+                    {{ exercise.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </label>
+    <input type="submit" value="Filter">
+</form>
+
+{% if stats.total_workouts %}
+    <h3>Report Results</h3>
+    <p>Total Workouts: {{ stats.total_workouts }}</p>
+    <p>Average Duration: {{ stats.avg_duration|floatformat:2 }} minutes</p>
+{% else %}
+    <p>No matching workouts.</p>
+{% endif %}
+
+{% endblock %}
