@@ -26,10 +26,15 @@ GymJournal is a Django-based web application that allows users to log and track 
    ```bash
    git clone git@github.com:jhayash/GymJournal.git
    cd GymJournal
-2. python3 -m venv venv
+2. ```bash
+   python3 -m venv venv
    source venv/bin/activate
-3. pip install -r requirements.txt
-4. python manage.py migrate
-5. python manage.py createsuperuser
-6. python manage.py runserver
+3.```bash
+   pip install -r requirements.txt
+4. ```bash
+   python manage.py migrate
+5. ```bash
+   python manage.py createsuperuser
+6. ```bash
+   python manage.py runserver
 7. Visit this site: http://127.0.0.1:8000/admin/
