@@ -37,7 +37,7 @@ GymJournal is a Django-based web application that allows users to log and track 
    pip install -r requirements.txt
    
 4. Run migrations:
-  ```bash
+   ```bash
    python manage.py migrate
    
 5. Create a superuser to access the admin:
