@@ -27,24 +27,24 @@ GymJournal is a Django-based web application that allows users to log and track 
    git clone git@github.com:jhayash/GymJournal.git
    cd GymJournal
    
-2.
+2. Create a virtual environment:
    ```bash
    python3 -m venv venv
    source venv/bin/activate
    
-3.
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    
-4.
+4. Run migrations:
   ```bash
    python manage.py migrate
    
-5.
+5. Create a superuser to access the admin:
    ```bash
    python manage.py createsuperuser
    
-6.
+6. Start the development server
    ```bash
    python manage.py runserver
    
